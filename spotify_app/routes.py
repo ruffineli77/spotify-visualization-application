@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 from spotify_app import app, db
 from spotify_app.forms import ContactForm
-from spotify_app.models import User, Post
+from spotify_app.models import User
 from flask import url_for, render_template, redirect, flash, abort, request
 from flask_sqlalchemy import Pagination
 from sqlalchemy import func
