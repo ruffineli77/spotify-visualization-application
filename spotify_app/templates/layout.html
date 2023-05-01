@@ -1,0 +1,142 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <title>Social Media App</title>
+  </head>
+
+  <body>
+    <div class="fixed-nav-buttons">
+      <a href="#top"><img src={{ url_for('static', filename='svg_images/angle-up-solid.svg') }} alt=""></a>
+      <a href="#bottom"><img src={{ url_for('static', filename='svg_images/angle-down-solid.svg') }} alt=""></a>
+    </div>
+
+    <script>
+      var dark_setting = localStorage.getItem('isDarkMode')
+      if (dark_setting === 'true'){
+        document.body.classList.add("dark-mode");
+      }
+    </script>
+
+    <div id="top"></div>
+    
+    <main>
+      <nav class="left-content">
+        <ul id="navLinks">
+          <a href="{{ url_for('home') }}" id="mainWebsiteLink">
+            <h2>NotInstagram</h2>
+          </a>
+          <a href="{{ url_for('home') }}">
+            <li>
+              <div id="homeLink">
+                <img src={{ url_for('static', filename='svg_images/house-door.svg') }} alt="" ></img>
+                <h3>Home</h3>
+              </div>
+            </li>
+          </a>
+
+          <a href="">
+            <li>
+              <div>
+                <img src={{ url_for('static', filename='svg_images/search.svg') }} alt="" ></img>
+                <h3>Search</h3>
+              </div>
+            </li>
+          </a>
+          <a href="{{ url_for('explore') }}">
+            <li>
+              <div>
+                <img src={{ url_for('static', filename='svg_images/compass.svg') }} alt="" ></img>
+                <h3>Explore</h3>              
+              </div>
+            </li>
+          </a>
+          <a href="">
+            <li>
+              <div>
+                <img src={{ url_for('static', filename='svg_images/plus-circle.svg') }} alt="" ></img>
+                <h3>New post</h3>
+              </div>
+            </li>
+          </a>
+          <a href="{{ url_for('messages') }}">
+            <li>
+              <div>
+                <img src={{ url_for('static', filename='svg_images/chat.svg') }} alt="" ></img>
+                <h3>Messages</h3>
+              </div>
+            </li>
+          </a>
+          <a href="">
+            <li>
+              <div>
+                <img src={{ url_for('static', filename='svg_images/bell.svg') }} alt="" ></img>
+                <h3>Notifications</h3>
+              </div>
+            </li>
+          </a>
+          <a href="{{ url_for('profile') }}">
+            <li>
+              <div>
+                <img src={{ url_for('static', filename='svg_images/person.svg') }} alt="" ></img>
+                <h3>Profile</h3>
+              </div>
+            </li>
+          </a>
+        </ul>
+
+        <div class="more-dropdown">
+          <a href="" id="moreLink">
+            <img src={{ url_for('static', filename='svg_images/bars-solid.svg') }} alt="" ></img>
+            <h3>More</h3>
+          </a>
+          <div class="more-dropdown-content" id="moreTab">
+            
+          </div>
+        </div>
+      </nav>
+      
+      <div class="center-content">
+        {% block content %}{% endblock %}
+      </div>
+    </main>
+    <hr class="rounded"> 
+
+    <section>
+      <script>
+        function revealCaption(postID) {
+          document.querySelector('#' + postID + ' #moreDots').style.display = 'none';
+          document.querySelector('#' + postID + ' #moreCaption').style.display = 'inline';
+        }
+      </script>
+
+      <script>
+        function openModal(postID) {
+          currentModal =document.querySelector('#' + postID + ' #favArtistsModal')
+          currentModal.style.display = 'block';
+          document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(postID) {
+          currentModal.style.display = 'none';
+          document.body.style.overflow = 'auto';
+
+        }
+
+        window.onclick = function(event) {
+          if (event.target == currentModal) {
+            currentModal.style.display = "none";
+            document.body.style.overflow = 'auto';
+
+          }
+        }
+
+      </script>
+
+    </section>
+  </body>
+</html>
