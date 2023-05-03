@@ -350,30 +350,22 @@ hr.rounded {
 }
 
 footer {
+  background-color: $dark-color-1;
   display: flex;  
-  flex-direction: row;
-  // min-height: 100px;
+  flex-direction: column;
+  align-content: flex-start;
+  margin-left: 0;
   width: 100%;
   padding: 50px 0;
-  gap: 15px;
-  background-color: $dark-color-1;
-  
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  // gap: 15px;
   }
-  li {
-    display: inline;
-    margin: 6px 30px;
-    white-space: wrap;
-  }
-}
+
 .footer-title {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  // align-items: center;
+  justify-content: flex-start;
+  align-items: center;
   margin-right: 80px;
 
   h3 {
@@ -383,6 +375,53 @@ footer {
     width: 2em;
     height: 2em;
     filter: $secondary-color-filter;
+  }
+}
+
+.all-footer-columns {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
+  column-gap: 25px;
+  row-gap: 30px;
+  // align-self: center;
+  justify-content:flex-start;
+  text-align:start;
+  padding: 5px 50px 0 0;
+  margin: 10px 0;
+  min-height: 200px;
+}
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  // align-items: center;
+  min-width: 20%;
+  margin-left: 0;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    display: inline;
+    margin: 6px 0;
+    white-space: wrap;
+    font-size:  medium;
+
+  }
+
+  li:hover a {
+    color: $primary-color;
+    text-decoration: none;
+  }
+  li:hover img {
+    filter: $primary-color-filter;
   }
 }
 
@@ -431,10 +470,7 @@ footer {
 
 // Tablets
 @media screen and (max-width: 1300px) {
-  .video-column {
-    width: 49.9999%;
-  }
-  .top-footer {
+  .all-footer-columns {
     grid-template-columns: 1fr 1fr;
     column-gap: 5px;
   }
@@ -442,7 +478,7 @@ footer {
   .left-content {
     width: 100px;
 
-    h3{
+    h3 {
       display: none; 
     }
   }
@@ -461,10 +497,7 @@ footer {
 // Phones
 // Sidebar is on the bottom, 
 @media screen and (max-width: 780px) {
-  .video-column {
-    width: 99.99999%;
-  }
-  .top-footer{
+  .all-footer-columns{
     grid-template-columns: 20fr;
     justify-items: start;
     padding: 5px 20px 5px 30px;

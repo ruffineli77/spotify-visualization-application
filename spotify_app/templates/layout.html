@@ -82,55 +82,53 @@
       <div class="center-content">
         {% block content %}{% endblock %}
         <footer>
+            <div class="footer-title">
+              <img src="{{ url_for('static', filename='svg_images/spotify.svg') }}" alt="">
+              <h3>Spotify Visualization Explorer</h3>
+            </div>
+          <div class="all-footer-columns">
 
-          <ul class="footer-items">
-            <li>
-              <div class="footer-title">
-                <img src="{{ url_for('static', filename='svg_images/spotify.svg') }}" alt="">
-                <h3>Spotify Visualization Explorer</h3>
-              </div>
-            </li>
-            <li>
+            <div class="footer-column">
               <h3>Documentation</h3>
-              <ul class="link-group">
+              <ul >
                 <li><a href="#">Link</a></li>
                 <li><a href="#">Link</a></li>
                 <li><a href="#">Link</a></li>
                 <li><a href="#">Link</a></li>
                 <li><a href="#">Link</a></li>
               </ul>
-            </li>
-            <li>
+            </div>
+            <div class="footer-column">
               <h3>Documentation</h3>
-              <ul class="link-group">
+              <ul>
                 <li><a href="#">Link</a></li>
                 <li><a href="#">Link</a></li>
                 <li><a href="#">Link</a></li>
                 <li><a href="#">Link</a></li>
                 <li><a href="#">Link</a></li>
               </ul>
-            </li>
-            <li>
+            </div>
+            <div class="footer-column">
               <h3>News</h3>
-              <ul class="link-group">
+              <ul>
                 <li><a href="#">Link</a></li>
                 <li><a href="#">Link</a></li>
                 <li><a href="#">Link</a></li>
                 <li><a href="#">Link</a></li>
                 <li><a href="#">Link</a></li>
               </ul>
-            </li>
-            <li>
+            </div>
+            <div class="footer-column">
               <h3>Legal</h3>
-              <ul class="link-group"> 
+              <ul> 
                 <li><a href="#">Link</a></li>
                 <li><a href="#">Link</a></li>
                 <li><a href="#">Link</a></li>
                 <li><a href="#">Link</a></li>
                 <li><a href="#">Link</a></li>
               </ul>
-            </li>
-          </ul>
+            </div>
+          </div>
         </footer>
 
       </div>
