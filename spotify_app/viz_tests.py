@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 # Temporary path to the spotify data json files.
-temp_data_folder = ("spotify_api/temporary/eli_spotify_data/MyData")
+temp_data_folder = ("temporary_data/eli_data2")
 
 
 # This function is for unzipping
@@ -85,7 +85,7 @@ def create_dataframe(data_files):
     return dataframe  # a dict. Keys are song names values are number of plays.
 
 
-played_songs = create_dataframe(decode_json_files(collect_streamingdata()))
+# played_songs = create_dataframe(decode_json_files(collect_streamingdata()))
 
-for song in played_songs.items():
-    print(song)
+# for song in played_songs.items():
+#     print(song)
