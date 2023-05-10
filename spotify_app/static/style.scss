@@ -45,7 +45,7 @@ body {
 }
 main {  
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: row;
   justify-content: center;
   align-items: flex-start;
   background-color: $dark-color-1;
@@ -69,16 +69,13 @@ hr.rounded {
 
 .nav-buttons {
   display: flex;
-  // flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 40px;
   width: 300px;
   height: 100%;
-  // margin: 0px 0px 0px 245px;
   padding: 0;
   background-color: $dark-color-1;
-  border: medium dashed green;
 }
 #mainWebsiteLink {
   margin-bottom: 5px;
@@ -167,7 +164,7 @@ hr.rounded {
   align-items: flex-start;
   gap: 40px;
   width: 100%;
-  // margin: 0px 0px 0px 245px;
+  margin: 0px 0px 0px 245px;
   padding: 0;
   height: 100%;
 }
@@ -216,7 +213,7 @@ footer {
   align-content: flex-start;
   margin-left: 0;
   width: 100%;
-  padding: 50px 0 50px 50px;
+  padding: 20px 0 30px 50px;
   }
 
 .footer-title {
@@ -240,7 +237,7 @@ footer {
   display: grid;
   grid-template-columns: 20% 20% 20% 20%;
   column-gap: 25px;
-  row-gap: 30px;
+  row-gap: 15px;
   justify-content:flex-start;
   text-align:start;
   padding: 5px 50px 0 0;
@@ -419,6 +416,11 @@ footer {
   }
   .nav-buttons {
     width: 100%;
+    position: sticky;
+    bottom: 0;
+    border-top: medium solid grey;
+    padding: 5px 0 15px 0;
+
   }
   #navLinks {
     flex-direction: row;

@@ -27,7 +27,7 @@ body a:hover {
 
 main {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: row;
   justify-content: center;
   align-items: flex-start;
   background-color: #0E1112;
@@ -60,7 +60,6 @@ hr.rounded {
   height: 100%;
   padding: 0;
   background-color: #0E1112;
-  border: medium dashed green;
 }
 
 #mainWebsiteLink {
@@ -151,6 +150,7 @@ hr.rounded {
   align-items: flex-start;
   gap: 40px;
   width: 100%;
+  margin: 0px 0px 0px 245px;
   padding: 0;
   height: 100%;
 }
@@ -203,7 +203,7 @@ footer {
   align-content: flex-start;
   margin-left: 0;
   width: 100%;
-  padding: 50px 0 50px 50px;
+  padding: 20px 0 30px 50px;
 }
 
 .footer-title {
@@ -228,7 +228,7 @@ footer {
   grid-template-columns: 20% 20% 20% 20%;
   -moz-column-gap: 25px;
        column-gap: 25px;
-  row-gap: 30px;
+  row-gap: 15px;
   justify-content: flex-start;
   text-align: start;
   padding: 5px 50px 0 0;
@@ -390,6 +390,10 @@ footer {
   }
   .nav-buttons {
     width: 100%;
+    position: sticky;
+    bottom: 0;
+    border-top: medium solid grey;
+    padding: 5px 0 15px 0;
   }
   #navLinks {
     flex-direction: row;
