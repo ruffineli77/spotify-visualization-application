@@ -1,0 +1,57 @@
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="home-page">
+  <div class="masonry-grid">
+    {% for video in videos.items %}
+    <div class="album-card">
+      <video class="" controls loop>
+        <source src={{ url_for('static', filename='folders/'+video.folder_name+'/'+video.file_name) }} type="video/mp4">
+      </video>
+    </div>
+    {% endfor %}
+  </div>
+
+  <br>
+
+  <div class="page-navigation">
+    {% for page_num in videos.iter_pages(left_edge=1, right_edge=1, left_current=2, right_current=2) %}
+    {% if page_num %}
+      {% if videos.page == page_num %}
+        <a class = "" href="{{ url_for('explore', page=page_num, vid_fold=vid_fold) }}">{{ page_num }}</a>
+      {% else %}
+        <a class = "" href="{{ url_for('explore', page=page_num, vid_fold=vid_fold) }}">{{ page_num }}</a>
+      {% endif %}
+    {% else %}
+      ...
+    {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="upload-data-button">
+    <button class="buttonThree">Upload Data</button>
+    <button class="buttonThree">Upload Data</button>
+    <button class="buttonThree">Upload Data</button>
+  </div>
+</div>
+
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script>
+var elem = document.querySelector('.masonry-grid');
+var msnry = new Masonry( elem, {
+  // options
+  itemSelector: '.album-card',
+  columnWidth: 0
+});
+
+// element argument can be a selector string
+//   for an individual element
+var msnry = new Masonry( '.masonry-grid', {
+  // options
+});
+</script>
+
+
+{% endblock content %}

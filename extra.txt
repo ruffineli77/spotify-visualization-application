@@ -1,0 +1,97 @@
+
+
+# Photography Portfolio
+This can be used to display art or photography or videos for employers/clients. Like a portfolio.
+Alternatively it can be a paid website for exclusive content, wallpapers, art commisions, etc.
+There are multiple levels of monthy membership available, each with different benefits. (copy patron, kofi, whatever)
+
+Free version example use for a US based real estate photographer.
+They will use this website to get clients (real estate companies) for taking photos of real estate listings.
+This version would be simmilar to pinterest.
+
+Each property they have taken pictires of will have these default photos. There are other non-defaults to add.
+- Front of the house
+- Back of the house
+- Living room
+- Dining room
+- Kitchen
+- Master bedroom
+- Bedroon
+- Basement
+
+
+For a professional photography website there are alot of possible categories. It might be better to have a select
+few to be highlighted/emphasized and show up specific work. This way there aren't categories with only two pictures.
+
+Possible default category types.
+- Default category. (Living room, backyard, kitchen) 
+- City (San Francisco, Manhattan, Tampa) 
+- Location Type. (suburban, urban, rural)
+- Property Type. (row home, apartment, condo, dorm, etc)
+
+## Pages
+
+- Home. the base template. Navigate to other pages from here.
+Signed in members see latest posts, favorites/likes, blog posts. Guests see previews, special offers,
+promotions, membership details, etc.
+- Features. For displaying available categories advertising past work. Includes a gif of previews for
+each cat.
+- Video Gallery (the same no matter which videos/images are used.) 
+A grid of video cards with optional masonry layout.
+- About/Help. Get information on the site and how to use it. See credits, software, changelog, etc.
+- Contact. Users fill out a form with their email, name, and a message. All emails go through a filter and are sorted. This will need extra attention because it getting in contact with clients is the entire purpose of the webiste.
+- FAQs. Alleviate concerns potential clients might have with a fabricated q/a.
+- Pricing. Hourly or whatver photographers charge. Look into the basic types of payment for each website.
+- Checkout>Payment.
+
+## Sections
+
+- header
+Has links to each type of gallery, home, features, contact, and help.
+
+- main
+
+- footer.
+links to the artists email,
+
+- advertisements
+
+### Header Options
+
+- home
+- latest posts
+- search
+- categories
+- news
+- store/shop
+- events
+- plans/memberships/benefits
+- sign up/login
+- my account
+- settings
+
+### Footer Options
+
+Minimal (can be a header dropdown if needed.)
+
+- logo
+- privacy policy
+- faqs
+- terms and conditions
+- social media links
+- contact
+- about
+- categories
+- subscribe
+- locations
+- manage subscription
+- advertise
+- careers
+- accessibility statement
+- security
+- partner (link to a partner company)
+
+Informational
+
+- site categories. example specific blog topic
+- links specific searches (just links to pages)
