@@ -11,13 +11,8 @@
 
   <body>
     <main>
-      <nav class="left-content">
+      <nav class="nav-buttons">
         <ul id="navLinks">
-          <li>
-            <a href="{{ url_for('home') }}" id="mainWebsiteLink">
-              <h2>Spotify Explorer</h2>
-            </a>
-          </li>
           <li>
             <a href="{{ url_for('home') }}">
               <div id="homeLink">
@@ -51,34 +46,15 @@
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="{{ url_for('faqs') }}">
                 <div>
                   <img src="{{ url_for('static', filename='svg_images/chat.svg') }}" alt="">
                   <h3>FAQs</h3>
                 </div>
             </a>
           </li>
-          <li>
-            <a href="#">
-              <div>
-                <img src="{{ url_for('static', filename='svg_images/chat.svg') }}" alt="">
-                <h3>Contact</h3>
-              </div>
-            </a>
-          </li>
         </ul>
-
-        <div class="more-dropdown">
-          <a href="" id="moreLink">
-            <img src="{{ url_for('static', filename='svg_images/bars-solid.svg') }}" alt="">
-            <h3>More</h3>
-          </a>
-          <div class="more-dropdown-content" id="moreTab">
-            
-          </div>
-        </div>
       </nav>
-      
       <div class="center-content">
         {% block content %}{% endblock %}
         <footer>

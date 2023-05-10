@@ -25,8 +25,7 @@ Favorite artists
 
 ## Project Creation Steps
 
-1. Unpack the zipped data.
-2. Grab json files. (StreamingHistory)
+1. Authorize access to a users a data.
 3. Get a list/tuple of all streamed songs and all artists and convert it to a dataframe? array?
 We get date and time played, artist name, song name and total play time from one
 record in StreamingHistory.json. We only need artist name and song name for this viz.
@@ -43,3 +42,8 @@ Option 2. This might be better for people who have concerns about sharing their 
 1. Download spotify data.
 2. Upload the zip folder to the website.
 3. Look at visualizations and explanations.
+
+
+## Authorization
+
+Spotify uses The OAuth framework.
