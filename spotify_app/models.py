@@ -22,3 +22,13 @@ class Track(db.Model):
 
     def __repr__(self):
         return f"Video('{self.track_name}', '{self.artist_name}')"
+
+
+class Video(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    file_name = db.Column(db.String(80), nullable=False)
+    folder_name = db.Column(db.String(80), nullable=False)
+
+
+    def __repr__(self):
+        return f"Video('{self.file_name}', '{self.folder_name}')"

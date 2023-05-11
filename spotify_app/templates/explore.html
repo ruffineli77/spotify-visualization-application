@@ -8,7 +8,7 @@
     {% for video in videos.items %}
     <div class="album-card">
       <video class="" controls loop>
-        <source src={{ url_for('static', filename='folders/'+video.folder_name+'/'+video.file_name) }} type="video/mp4">
+        <source src={{ url_for('static', filename='folders/'+video.folder_name+'/'+video.file_name)+'#t=0.1' }} type="video/mp4">
       </video>
     </div>
     {% endfor %}
